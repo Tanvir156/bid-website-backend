@@ -14,7 +14,10 @@ app.get("/", (req, res) => {
   res.send("API is running..");
 });
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000"); // Allow requests from this origin
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://bid-website-frontend-l3on-irxdefx17-tanvir156.vercel.app"
+  ); // Allow requests from this origin
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE"); // Allow specific HTTP methods
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization"); // Allow specific headers
   next();
